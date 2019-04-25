@@ -1,7 +1,7 @@
 # AssertThat BDD Node.js client
 
 ```
-$ npm install assertthat-bdd -g
+$ npm install @assertthat/assertthat-bdd -g
 ```
 
 ## Using from the command line
@@ -40,7 +40,7 @@ Mandatory parameters are -i, -a, -s (if -a or -s is missing the plugin will atte
 You can use the client in your own scripts to download feature files and upload reports to AssertThat BDD .
 
 ```
-$ npm install assertthat-bdd --save
+$ npm install @assertthat/assertthat-bdd --save
 ```
 
 * #####For downloading feature files:

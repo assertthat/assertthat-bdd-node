@@ -4,7 +4,7 @@ node_js:
 
 deploy:
   provider: script
-  script: "cp .npmrc.template $HOME/.npmrc && npm publish --access public"
+  script: "cp .npmrc.template $HOME/.npmrc && chmod +x ./bin/cli.js && npm publish --access public"
   skip_cleanup: true
   on:
     tags: true

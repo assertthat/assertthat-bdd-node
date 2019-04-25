@@ -18,6 +18,9 @@
   ],
   "author": "AssertThat",
   "license": "MIT",
+  "bin":{
+    "assertthat-bdd": "bin/cli.js"
+  },
   "bugs": {
     "url": "https://github.com/assertthat/assertthat-bdd-node/issues"
   },

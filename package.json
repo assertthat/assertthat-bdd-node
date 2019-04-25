@@ -1,0 +1,33 @@
+{
+  "name": "assertthat-bdd-node",
+  "version": "1.0.0",
+  "description": "Node.js module for integration with AssertThat BDD Jira plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assertthat/assertthat-bdd-node.git"
+  },
+  "keywords": [
+    "bdd",
+    "assertthat-bdd",
+    "jira-plugin",
+    "cucumber"
+  ],
+  "author": "AssertThat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assertthat/assertthat-bdd-node/issues"
+  },
+  "homepage": "https://github.com/assertthat/assertthat-bdd-node#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "colors": "^1.3.3",
+    "commander": "^2.20.0",
+    "dateformat": "^3.0.3",
+    "superagent": "^3.8.2",
+    "superagent-proxy": "^2.0.0"
+  }
+}

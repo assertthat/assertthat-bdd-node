@@ -1,6 +1,6 @@
 {
   "name": "@assertthat/assertthat-bdd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js module for integration with AssertThat BDD Jira plugin",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/assertthat/assertthat-bdd-node.git"
   },
   "keywords": [
+    "assertthat",
     "bdd",
     "assertthat-bdd",
     "jira-plugin",

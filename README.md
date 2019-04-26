@@ -1,4 +1,8 @@
+[![Build Status](https://travis-ci.org/assertthat/assertthat-bdd-maven-plugin.svg?branch=master)](https://travis-ci.org/assertthat/assertthat-bdd-node)
+
 # AssertThat BDD Node.js client
+
+Node.js plugin for interaction with [AssertThat BDD Jira plugin](https://marketplace.atlassian.com/apps/1219033/assertthat-bdd-test-management-in-jira?hosting=cloud&tab=overview).
 
 ```
 $ npm install @assertthat/assertthat-bdd -g

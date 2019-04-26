@@ -47,7 +47,7 @@ You can use the client in your own scripts to download feature files and upload 
 $ npm install @assertthat/assertthat-bdd --save
 ```
 
-* #####For downloading feature files:
+* For downloading feature files:
 
 ```
 var assertThat = require('assertthat-bdd');
@@ -73,7 +73,7 @@ Available parameters:
   -x, --proxyURI [URI]                      Proxy URI
 ```
 
-* #####For uploading reports:
+* For uploading reports:
 
 ```
 var assertThat = require('assertthat-bdd');

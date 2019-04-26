@@ -98,3 +98,7 @@ Available parameters:
   -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
   -x, --proxyURI [URI]                      Proxy URI
 ```
+
+### Example project 
+
+Refer to example project [assertthat-testcafe-demo](https://github.com/assertthat/assertthat-testcafe-demo)

@@ -5,7 +5,7 @@ var assertThat = require('../lib/assertthat-bdd');
 var colors = require('colors');
 
 program
-  .version('1.0.0')
+  .version('1.2.0')
   .option('-a, --accessKey [ASSERTTHAT_ACCESS_KEY]', 'Access key')
   .option('-s, --secretKey [ASSERTTHAT_SECRET_KEY]', 'Secret key')
   .option('-f, --features', 'Download features')

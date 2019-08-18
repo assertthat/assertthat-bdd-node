@@ -29,6 +29,7 @@ Available parameters:
   -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
   -m, --mode <mode>                         Features to download (default: "automated")
   -n, --runName [NAME]                      Test run name
+  -d, --metadata [json string]              Metadata json string
   -o, --outputFolder [FOLDER PATH]          Features output folder
   -q, --jql [JQL]                           JQL filter for features
   -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names

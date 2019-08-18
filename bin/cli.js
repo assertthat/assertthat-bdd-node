@@ -14,7 +14,7 @@ program
   .option('-j, --jsonReportFolder [FOLDER PATH]', 'Cucumber json files folder')
   .option('-m, --mode <mode>', 'Features to download', /^(automated|manual|both)$/i, 'automated')
   .option('-n, --runName [NAME]', 'Test run name')
-  .option('-d, --metadata [json string]', 'Metadata json string')
+  .option('-d, --metadata [FILE PATH]', 'Metadata json file path')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
   .option('-q, --jql [JQL]', 'JQL filter for features')
   .option('-t, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')

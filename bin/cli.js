@@ -14,6 +14,7 @@ program
   .option('-j, --jsonReportFolder [FOLDER PATH]', 'Cucumber json files folder')
   .option('-m, --mode <mode>', 'Features to download', /^(automated|manual|both)$/i, 'automated')
   .option('-n, --runName [NAME]', 'Test run name')
+  .option('-d, --metadata [json string]', 'Metadata json string')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
   .option('-q, --jql [JQL]', 'JQL filter for features')
   .option('-t, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')
@@ -39,6 +40,7 @@ var settings = {
     secretKey: program.secretKey || process.env.ASSERTTHAT_SECRET_KEY,
     jsonReportFolder: program.jsonReportFolder || './reports/',
     mode: program.mode,
+    metadata: program.metadata || '',
     runName: program.runName || 'Test run ' + dateFormat(now, "dd mmm yyyy HH:mm:ss"),
     outputFolder: program.outputFolder || './features/',
     jql: program.jql,

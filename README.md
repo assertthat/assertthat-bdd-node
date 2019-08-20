@@ -101,6 +101,17 @@ Available parameters:
   -d, --metadata [FILE PATH]                Metadata json file path
 ```
 
+* Metadata file path is the path to a  simple json file (no nesting) with some additional data about the run that can be optionally supplied. 
+
+Example of the file can be: 
+
+```
+{
+  "environment": "UAT-1",
+  "build": "XX-1-YY"
+}
+```
+
 ### Example project 
 
 Refer to example project [assertthat-testcafe-demo](https://github.com/assertthat/assertthat-testcafe-demo)

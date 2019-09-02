@@ -12,6 +12,6 @@ deploy:
 notifications:
   email:
     recipients:
-    - glib.briia@gmail.io
+    - glib.briia@gmail.com
     on_success: change
     on_failure: always

@@ -3,6 +3,7 @@
 var program = require('commander');
 var assertThat = require('../lib/assertthat-bdd');
 var colors = require('colors');
+var dateFormat = require('dateformat');
 
 program
   .version('1.2.0')
@@ -30,10 +31,6 @@ program.on('--help', function(){
 
 program.parse(process.argv);
 
-var dateFormat = require('dateformat');
-var now = new Date();
-
-
 var settings = {
     projectId: program.projectId,
     accessKey: program.accessKey || process.env.ASSERTTHAT_ACCESS_KEY,
@@ -41,7 +38,7 @@ var settings = {
     jsonReportFolder: program.jsonReportFolder || './reports/',
     mode: program.mode,
     metadata: program.metadata || '',
-    runName: program.runName || 'Test run ' + dateFormat(now, "dd mmm yyyy HH:mm:ss"),
+    runName: program.runName || 'Test run ' + dateFormat(new Date(), "dd mmm yyyy HH:mm:ss"),
     outputFolder: program.outputFolder || './features/',
     jql: program.jql,
     jsonReportIncludePattern: program.jsonReportIncludePattern,

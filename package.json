@@ -19,7 +19,7 @@
   ],
   "author": "AssertThat",
   "license": "MIT",
-  "bin":{
+  "bin": {
     "assertthat-bdd": "bin/cli.js"
   },
   "bugs": {

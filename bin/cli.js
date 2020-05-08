@@ -9,6 +9,7 @@ program
   .version('1.2.0')
   .option('-a, --accessKey [ASSERTTHAT_ACCESS_KEY]', 'Access key')
   .option('-s, --secretKey [ASSERTTHAT_SECRET_KEY]', 'Secret key')
+  .option('-u, --jiraServerUrl [URL]', 'Jira server URL e.g https://mycompanyjira.com')
   .option('-f, --features', 'Download features')
   .option('-r, --report', 'Upload report')
   .option('-i, --projectId <ID>', 'Jira project id')
@@ -35,6 +36,7 @@ var settings = {
     projectId: program.projectId,
     accessKey: program.accessKey || process.env.ASSERTTHAT_ACCESS_KEY,
     secretKey: program.secretKey || process.env.ASSERTTHAT_SECRET_KEY,
+    jiraServerUrl: program.jiraServerUrl,
     jsonReportFolder: program.jsonReportFolder || './reports/',
     mode: program.mode,
     metadata: program.metadata || '',

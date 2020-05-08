@@ -23,6 +23,7 @@ Available parameters:
   -V, --version                             output the version number
   -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -f, --features                            Download features
   -r, --report                              Upload report
   -i, --projectId <ID>                      Jira project id
@@ -56,7 +57,8 @@ var assertThat = require('assertthat-bdd');
 assertThat.downloadFeatures({
   "projectId": PROJECT_ID,
   "accessKey": "ASSERTTHAT_ACCESS_KEY",
-  "secretKey": "ASSERTTHAT_SECRET_KEY"
+  "secretKey": "ASSERTTHAT_SECRET_KEY",
+  "jiraServerUrl": "Jira server URL." //Omit if using Jira Cloud
 }, function() {
   // some optional callback code
 });
@@ -67,6 +69,7 @@ Available parameters:
 ```
   -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -i, --projectId <ID>                      Jira project id
   -m, --mode <mode>                         Features to download (default: "automated")
   -o, --outputFolder [FOLDER PATH]          Jira project id
@@ -82,7 +85,8 @@ var assertThat = require('assertthat-bdd');
 assertThat.uploadReports({
   "projectId": PROJECT_ID,
   "accessKey": "ASSERTTHAT_ACCESS_KEY",
-  "secretKey": "ASSERTTHAT_SECRET_KEY"
+  "secretKey": "ASSERTTHAT_SECRET_KEY",
+  "jiraServerUrl": "Jira server URL." //Omit if using Jira Cloud
 }, function() {
    // some optional callback code
 });

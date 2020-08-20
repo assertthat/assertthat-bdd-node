@@ -15,6 +15,7 @@ program
   .option('-i, --projectId <ID>', 'Jira project id')
   .option('-j, --jsonReportFolder [FOLDER PATH]', 'Cucumber json files folder')
   .option('-m, --mode <mode>', 'Features to download', /^(automated|manual|both)$/i, 'automated')
+  .option('-l, --tags <tag-expression>', 'Cucucmber tag expression for filtering scenarios', '')
   .option('-n, --runName [NAME]', 'Test run name')
   .option('-d, --metadata [FILE PATH]', 'Metadata json file path')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')

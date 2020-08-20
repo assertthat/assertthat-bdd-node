@@ -72,6 +72,7 @@ Available parameters:
   -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -i, --projectId <ID>                      Jira project id
   -m, --mode <mode>                         Features to download (default: "automated")
+  -l, --tags <tag-expression>               Cucucmber tag expression for scenarios filtering
   -o, --outputFolder [FOLDER PATH]          Jira project id
   -q, --jql [JQL]                           JQL filter for features
   -x, --proxyURI [URI]                      Proxy URI

@@ -29,6 +29,7 @@ Available parameters:
   -i, --projectId <ID>                      Jira project id
   -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
   -m, --mode <mode>                         Features to download (default: "automated")
+  -l, --tags <tag-expression>               Cucucmber tag expression for scenarios filtering
   -n, --runName [NAME]                      Test run name
   -d, --metadata [FILE PATH]                Metadata json file path
   -o, --outputFolder [FOLDER PATH]          Features output folder

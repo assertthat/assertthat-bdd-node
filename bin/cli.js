@@ -21,7 +21,8 @@ program
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
   .option('-q, --jql [JQL]', 'JQL filter for features')
   .option('-t, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')
-  .option('-x, --proxyURI [URI]', 'Proxy URI');
+  .option('-x, --proxyURI [URI]', 'Proxy URI')
+  .option('-b, --numbered [true|false]', 'Append number to feature name on download');
 
 program.on('--help', function(){
   console.log('')
@@ -40,6 +41,7 @@ var settings = {
     jiraServerUrl: program.jiraServerUrl,
     jsonReportFolder: program.jsonReportFolder || './reports/',
     mode: program.mode,
+    numbered: program.numbered,
     metadata: program.metadata || '',
     runName: program.runName || 'Test run ' + dateFormat(new Date(), "dd mmm yyyy HH:mm:ss"),
     outputFolder: program.outputFolder || './features/',

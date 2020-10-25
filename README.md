@@ -36,6 +36,7 @@ Available parameters:
   -q, --jql [JQL]                           JQL filter for features
   -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
   -x, --proxyURI [URI]                      Proxy URI
+  -b, --numbered [true|false]               Append number to feature name on download
   -h, --help                                output usage information
 
 ```
@@ -76,6 +77,7 @@ Available parameters:
   -l, --tags <tag-expression>               Cucucmber tag expression for scenarios filtering
   -o, --outputFolder [FOLDER PATH]          Jira project id
   -q, --jql [JQL]                           JQL filter for features
+  -b, --numbered [true|false]               Append number to feature name on download
   -x, --proxyURI [URI]                      Proxy URI
 ```
 

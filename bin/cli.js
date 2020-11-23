@@ -56,7 +56,7 @@ function make_red(txt) {
 }
 
 if(program.features){
-    if(!program.projectId || !settings.accessKey || !settings.secretKey){
+    if(!settings.projectId || !settings.accessKey || !settings.secretKey){
         if(!program.projectId){
             console.log('');
             console.log(make_red('projectId (-i) option is required'));
@@ -79,7 +79,7 @@ if(program.features){
 }
 
 if(program.report){
-if(!program.projectId || !settings.accessKey || !settings.secretKey){
+if(!settings.projectId || !settings.accessKey || !settings.secretKey){
         if(!program.projectId){
             console.log('');
             console.log(make_red('projectId (-i) option is required'));

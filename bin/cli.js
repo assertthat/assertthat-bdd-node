@@ -35,7 +35,7 @@ program.on('--help', function(){
 program.parse(process.argv);
 
 var settings = {
-    projectId: program.projectId,
+    projectId: program.projectId || process.env.ASSERTTHAT_PROJECT_ID,
     accessKey: program.accessKey || process.env.ASSERTTHAT_ACCESS_KEY,
     secretKey: program.secretKey || process.env.ASSERTTHAT_SECRET_KEY,
     jiraServerUrl: program.jiraServerUrl,

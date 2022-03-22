@@ -19,7 +19,7 @@ program
   .option('-n, --runName [NAME]', 'Test run name')
   .option('-d, --metadata [FILE PATH]', 'Metadata json file path')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
-  .option('-q, --jql [JQL]', 'JQL filter for features')
+  .option('-q, --jql [JQL]', 'JQL filter for features download and report upload')
   .option('-t, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')
   .option('-x, --proxyURI [URI]', 'Proxy URI')
   .option('-b, --numbered [true|false]', 'Append number to feature name on download');

@@ -33,7 +33,7 @@ Available parameters:
   -n, --runName [NAME]                      Test run name
   -d, --metadata [FILE PATH]                Metadata json file path
   -o, --outputFolder [FOLDER PATH]          Features output folder
-  -q, --jql [JQL]                           JQL filter for features
+  -q, --jql [JQL]                           JQL filter for features download or Jira issues to update with test results
   -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
   -x, --proxyURI [URI]                      Proxy URI
   -b, --numbered [true|false]               Append number to feature name on download
@@ -105,6 +105,7 @@ Available parameters:
   -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
   -n, --runName [NAME]                      Test run name
   -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
+  -q, --jql [JQL]                           JQL filter for Jira issues to update with test results
   -x, --proxyURI [URI]                      Proxy URI
   -d, --metadata [FILE PATH]                Metadata json file path
 ```

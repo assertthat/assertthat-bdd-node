@@ -45,8 +45,8 @@ var settings = {
     metadata: program.metadata || '',
     runName: program.runName || 'Test run ' + dateFormat(new Date(), "dd mmm yyyy HH:mm:ss"),
     outputFolder: program.outputFolder || './features/',
-    jql: program.jql,
-    tags: program.tags,
+    jql: program.jql || '',
+    tags: program.tags || '',
     jsonReportIncludePattern: program.jsonReportIncludePattern,
     proxyURI: program.proxyURI || process.env.http_proxy,
 

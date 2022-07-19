@@ -32,15 +32,11 @@ function checkArgs(settings){
 module.exports = {
     downloadFeatures:  function(settings, callback) {
         settings = checkArgs(settings);
-        assertThat.downloadFeatures(settings, function() {
-            if (callback) callback();
-        });
+        assertThat.downloadFeatures(settings, callback);
     },
     uploadReports: function(settings, callback) {
         console.log(settings);
         settings = checkArgs(settings);
-        assertThat.uploadReports(settings, function() {
-            if (callback) callback();
-        });
+        assertThat.uploadReports(settings, callback);
     }
 }

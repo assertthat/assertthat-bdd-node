@@ -1,6 +1,6 @@
 'use strict'
 
-var assertThat = require('../lib/assertthat-bdd');
+var assertThat = require('./lib/assertthat-bdd');
 var _ = require('underscore');
 
 var defaults = {

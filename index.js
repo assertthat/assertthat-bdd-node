@@ -1,9 +1,9 @@
 'use strict'
 
-var assertThat = require('../lib/assertthat-bdd');
-var _ = require('underscore');
+const assertThat = require('./lib/assertthat-bdd');
+const _ = require('underscore');
 
-var defaults = {
+const defaults = {
     accessKey: process.env.ASSERTTHAT_ACCESS_KEY,
     secretKey: process.env.ASSERTTHAT_SECRET_KEY,
     jsonReportFolder: './reports/',
@@ -32,15 +32,11 @@ function checkArgs(settings){
 module.exports = {
     downloadFeatures:  function(settings, callback) {
         settings = checkArgs(settings);
-        assertThat.downloadFeatures(settings, function() {
-            if (callback) callback();
-        });
+        assertThat.downloadFeatures(settings, callback);
     },
     uploadReports: function(settings, callback) {
         console.log(settings);
         settings = checkArgs(settings);
-        assertThat.uploadReports(settings, function() {
-            if (callback) callback();
-        });
+        assertThat.uploadReports(settings, callback);
     }
 }

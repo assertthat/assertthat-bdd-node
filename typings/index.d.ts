@@ -1,4 +1,4 @@
-declare module 'assertthat-bdd' {
+declare module '@assertthat/assertthat-bdd' {
     export type Parameters = {
       accessKey: string;
       secretKey: string;

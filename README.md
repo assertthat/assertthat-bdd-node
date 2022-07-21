@@ -50,11 +50,15 @@ You can use the client in your own scripts to download feature files and upload 
 ```
 $ npm install @assertthat/assertthat-bdd --save
 ```
+### Typescript usage
+```ts
+import * as assertThat from 'assertthat-bdd'
+```
 
 * For downloading feature files:
 
-```
-var assertThat = require('assertthat-bdd');
+```js
+const assertThat = require('assertthat-bdd');
 
 assertThat.downloadFeatures({
   "projectId": PROJECT_ID,
@@ -83,8 +87,8 @@ Available parameters:
 
 * For uploading reports:
 
-```
-var assertThat = require('assertthat-bdd');
+```js
+const assertThat = require('assertthat-bdd');
 
 assertThat.uploadReports({
   "projectId": PROJECT_ID,
@@ -114,7 +118,7 @@ Available parameters:
 
 Example of the file can be: 
 
-```
+```json
 {
   "environment": "UAT-1",
   "build": "XX-1-YY"

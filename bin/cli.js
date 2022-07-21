@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict'
-var program = require('commander');
-var assertThat = require('../lib/assertthat-bdd');
-var colors = require('colors');
-var dateFormat = require('dateformat');
+const program = require('commander');
+const assertThat = require('../lib/assertthat-bdd');
+const colors = require('colors');
+const dateFormat = require('dateformat');
 
 program
   .version('1.2.0')
@@ -15,7 +15,7 @@ program
   .option('-i, --projectId <ID>', 'Jira project id')
   .option('-j, --jsonReportFolder [FOLDER PATH]', 'Cucumber json files folder')
   .option('-m, --mode <mode>', 'Features to download', /^(automated|manual|both)$/i, 'automated')
-  .option('-l, --tags <tag-expression>', 'Cucucmber tag expression for filtering scenarios', '')
+  .option('-l, --tags <tag-expression>', 'Cucumber tag expression for filtering scenarios', '')
   .option('-n, --runName [NAME]', 'Test run name')
   .option('-d, --metadata [FILE PATH]', 'Metadata json file path')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
@@ -34,7 +34,7 @@ program.on('--help', function(){
 
 program.parse(process.argv);
 
-var settings = {
+const settings = {
     projectId: program.projectId || process.env.ASSERTTHAT_PROJECT_ID,
     accessKey: program.accessKey || process.env.ASSERTTHAT_ACCESS_KEY,
     secretKey: program.secretKey || process.env.ASSERTTHAT_SECRET_KEY,

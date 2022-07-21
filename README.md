@@ -52,7 +52,7 @@ $ npm install @assertthat/assertthat-bdd --save
 ```
 ### Typescript usage
 ```ts
-import * as assertThat from 'assertthat-bdd'
+import * as assertThat from '@assertthat/assertthat-bdd'
 ```
 
 * For downloading feature files:

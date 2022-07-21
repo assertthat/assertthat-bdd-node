@@ -16,5 +16,10 @@ declare module 'assertthat-bdd' {
       options: Parameters,
       callback: Function,
     ): void;
+
+    export function uploadReports(
+      options: Parameters,
+      callback: Function,
+    ): void;
   }
   

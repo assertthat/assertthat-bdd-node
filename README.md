@@ -57,6 +57,8 @@ import * as assertThat from '@assertthat/assertthat-bdd'
 
 * For downloading feature files:
 
+Using Basic auth
+
 ```js
 const assertThat = require('assertthat-bdd');
 
@@ -70,11 +72,26 @@ assertThat.downloadFeatures({
 });
 ```
 
+Using Jira API token (more info can be found here [Using personal access tokens](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html))
+
+```js
+const assertThat = require('assertthat-bdd');
+
+assertThat.downloadFeatures({
+  "projectId": PROJECT_ID,
+  "token": "ASSERTTHAT_API_TOKEN",
+  "jiraServerUrl": "Jira server URL." //Omit if using Jira Cloud
+}, function() {
+  // some optional callback code
+});
+```
+
 Available parameters:
 
 ```
   -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
   -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -i, --projectId <ID>                      Jira project id
   -m, --mode <mode>                         Features to download (default: "automated")
@@ -86,6 +103,8 @@ Available parameters:
 ```
 
 * For uploading reports:
+
+Using Basic auth
 
 ```js
 const assertThat = require('assertthat-bdd');
@@ -100,11 +119,26 @@ assertThat.uploadReports({
 });
 ```
 
+Using Jira API token (more info can be found here [Using personal access tokens](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html))
+
+```js
+const assertThat = require('assertthat-bdd');
+
+assertThat.uploadReports({
+  "projectId": PROJECT_ID,
+  "token": "ASSERTTHAT_API_TOKEN",
+  "jiraServerUrl": "Jira server URL." //Omit if using Jira Cloud
+}, function() {
+   // some optional callback code
+});
+```
+
 Available parameters:
 
 ```
   -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
   -i, --projectId <ID>                      Jira project id
   -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
   -n, --runName [NAME]                      Test run name

@@ -1,7 +1,8 @@
 declare module '@assertthat/assertthat-bdd' {
     export type Parameters = {
-      accessKey: string;
-      secretKey: string;
+      accessKey?: string;
+      secretKey?: string;
+      token?: string;
       jiraServerUrl?: string;
       projectId: string;
       mode?: string;

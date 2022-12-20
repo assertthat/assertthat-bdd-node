@@ -9,6 +9,7 @@ program
   .version('1.2.0')
   .option('-a, --accessKey [ASSERTTHAT_ACCESS_KEY]', 'Access key')
   .option('-s, --secretKey [ASSERTTHAT_SECRET_KEY]', 'Secret key')
+  .option('-t, --token [ASSERTTHAT_API_TOKEN]', 'Jira API token (Server and DC only)')
   .option('-u, --jiraServerUrl [URL]', 'Jira server URL e.g https://mycompanyjira.com')
   .option('-f, --features', 'Download features')
   .option('-r, --report', 'Upload report')
@@ -20,7 +21,7 @@ program
   .option('-d, --metadata [FILE PATH]', 'Metadata json file path')
   .option('-o, --outputFolder [FOLDER PATH]', 'Jira project id')
   .option('-q, --jql [JQL]', 'JQL filter for features download and report upload')
-  .option('-t, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')
+  .option('-p, --jsonReportIncludePattern [PATTERN]', 'Pattern for json file names')
   .option('-x, --proxyURI [URI]', 'Proxy URI')
   .option('-b, --numbered [true|false]', 'Append number to feature name on download');
 
@@ -28,7 +29,9 @@ program.on('--help', function(){
   console.log('')
   console.log('Examples:');
   console.log('  $ assertthat-bdd -f -i 10001 -a "access_key" -s "secret_key"');
+  console.log('  $ assertthat-bdd -f -i 10001 -t JIRA_API_TOKEN');
   console.log('  $ assertthat-bdd -r -i 10001 -a "access_key" -s "secret_key"');
+  console.log('  $ assertthat-bdd -r -i 10001 -t JIRA_API_TOKEN');
   console.log('  $ assertthat-bdd -h');
 });
 
@@ -38,6 +41,7 @@ const settings = {
     projectId: program.projectId || process.env.ASSERTTHAT_PROJECT_ID,
     accessKey: program.accessKey || process.env.ASSERTTHAT_ACCESS_KEY,
     secretKey: program.secretKey || process.env.ASSERTTHAT_SECRET_KEY,
+    token: program.token || process.env.ASSERTTHAT_API_TOKEN,
     jiraServerUrl: program.jiraServerUrl,
     jsonReportFolder: program.jsonReportFolder || './reports/',
     mode: program.mode,
@@ -57,20 +61,15 @@ function make_red(txt) {
 }
 
 if(program.features){
-    if(!settings.projectId || !settings.accessKey || !settings.secretKey){
+    if(!settings.projectId || (!settings.token && (!settings.accessKey || !settings.secretKey))){
         if(!program.projectId){
             console.log('');
             console.log(make_red('projectId (-i) option is required'));
             console.log('');
         }
-        if(!program.accessKey){
+        if(!settings.token && (!settings.accessKey || !settings.secretKey)){
             console.log('');
-            console.log(make_red('accessKey (-a) option is required'));
-            console.log('');
-        }
-        if(!program.secretKey){
-            console.log('');
-            console.log(make_red('secretKey (-s) option is required'));
+            console.log(make_red('accessKey (-a) with secretKey (-s) or Jira API token (-t) option is required'));
             console.log('');
         }
         program.outputHelp(make_red);
@@ -80,20 +79,15 @@ if(program.features){
 }
 
 if(program.report){
-if(!settings.projectId || !settings.accessKey || !settings.secretKey){
+if(!settings.projectId || (!settings.token && (!settings.accessKey || !settings.secretKey))){
         if(!program.projectId){
             console.log('');
             console.log(make_red('projectId (-i) option is required'));
             console.log('');
         }
-        if(!program.accessKey){
+        if(!settings.token && (!settings.accessKey || !settings.secretKey)){
             console.log('');
-            console.log(make_red('accessKey (-a) option is required'));
-            console.log('');
-        }
-        if(!program.secretKey){
-            console.log('');
-            console.log(make_red('secretKey (-s) option is required'));
+            console.log(make_red('accessKey (-a) with secretKey (-s) or Jira API token (-t) option is required'));
             console.log('');
         }
         program.outputHelp(make_red);

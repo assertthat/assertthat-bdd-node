@@ -23,6 +23,7 @@ Available parameters:
   -V, --version                             output the version number
   -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
   -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -f, --features                            Download features
   -r, --report                              Upload report

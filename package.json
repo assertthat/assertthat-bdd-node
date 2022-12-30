@@ -36,7 +36,7 @@
     "underscore": "^1.13.2"
   },
   "devDependencies": {
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "chai": "^4.2.0"
   },
   "types": "typings/index.d.ts"

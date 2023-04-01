@@ -30,7 +30,7 @@ Available parameters:
   -i, --projectId <ID>                      Jira project id
   -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
   -m, --mode <mode>                         Features to download (default: "automated")
-  -l, --tags <tag-expression>               Cucucmber tag expression for scenarios filtering
+  -l, --tags <tag-expression>               Cucumber tag expression for scenarios filtering
   -n, --runName [NAME]                      Test run name
   -d, --metadata [FILE PATH]                Metadata json file path
   -o, --outputFolder [FOLDER PATH]          Features output folder
@@ -96,7 +96,7 @@ Available parameters:
   -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   -i, --projectId <ID>                      Jira project id
   -m, --mode <mode>                         Features to download (default: "automated")
-  -l, --tags <tag-expression>               Cucucmber tag expression for scenarios filtering
+  -l, --tags <tag-expression>               Cucumber tag expression for scenarios filtering
   -o, --outputFolder [FOLDER PATH]          Jira project id
   -q, --jql [JQL]                           JQL filter for features
   -b, --numbered [true|false]               Append number to feature name on download

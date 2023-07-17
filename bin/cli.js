@@ -51,7 +51,7 @@ const settings = {
     outputFolder: program.outputFolder || './features/',
     jql: program.jql || '',
     tags: program.tags || '',
-    jsonReportIncludePattern: program.jsonReportIncludePattern,
+    jsonReportIncludePattern: program.jsonReportIncludePattern || '.+.json',
     proxyURI: program.proxyURI || process.env.http_proxy,
 
 };

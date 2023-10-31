@@ -32,12 +32,12 @@
     "commander": "^2.20.0",
     "dateformat": "^3.0.3",
     "superagent": "^3.8.2",
-    "superagent-proxy": "^3.0.0",
+    "superagent-proxy": "^2.1.0",
     "underscore": "^1.13.2"
   },
   "devDependencies": {
-    "mocha": "^7.1.2",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^10.2.0"
   },
   "types": "typings/index.d.ts"
 }

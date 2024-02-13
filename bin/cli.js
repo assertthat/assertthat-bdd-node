@@ -6,14 +6,14 @@ const colors = require('colors');
 const dateFormat = require('dateformat');
 
 program
-  .version('1.2.0')
+  .version('2.0.0')
+  .option('--projectId <ID>', 'Jira project id')
   .option('--accessKey [ASSERTTHAT_ACCESS_KEY]', 'Access key')
   .option('--secretKey [ASSERTTHAT_SECRET_KEY]', 'Secret key')
   .option('--token [ASSERTTHAT_API_TOKEN]', 'Jira API token (Server and DC only)')
   .option('--jiraServerUrl [URL]', 'Jira server URL e.g https://mycompanyjira.com')
   .option('--features', 'Download features')
   .option('--report', 'Upload report')
-  .option('--projectId <ID>', 'Jira project id')
   .option('--jsonReportFolder [FOLDER PATH]', 'Cucumber json files folder')
   .option('--mode <mode>', 'Features to download', /^(automated|manual|both)$/i, 'automated')
   .option('--tags <tag-expression>', 'Cucumber tag expression for filtering scenarios', '')
@@ -83,12 +83,12 @@ if(program.report){
 if(!settings.projectId || (!settings.token && (!settings.accessKey || !settings.secretKey))){
         if(!program.projectId){
             console.log('');
-            console.log(make_red('projectId (-i) option is required'));
+            console.log(make_red('--projectId option is required'));
             console.log('');
         }
         if(!settings.token && (!settings.accessKey || !settings.secretKey)){
             console.log('');
-            console.log(make_red('accessKey (-a) with secretKey (-s) or Jira API token (-t) option is required'));
+            console.log(make_red('--accessKey with --secretKey or Jira API --token option is required'));
             console.log('');
         }
         program.outputHelp(make_red);

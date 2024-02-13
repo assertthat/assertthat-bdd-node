@@ -20,29 +20,31 @@ $ assertthat-bdd -i PROJECT_ID -a ASSERTTHAT_ACCESS_KEY -s ASSERTTHAT_SECRET_KEY
 
 Available parameters:
 ```
-  -V, --version                             output the version number
-  -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
-  -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
-  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
-  -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
-  -f, --features                            Download features
-  -r, --report                              Upload report
-  -i, --projectId <ID>                      Jira project id
-  -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
-  -m, --mode <mode>                         Features to download (default: "automated")
-  -l, --tags <tag-expression>               Cucumber tag expression for scenarios filtering
-  -n, --runName [NAME]                      Test run name
-  -d, --metadata [FILE PATH]                Metadata json file path
-  -o, --outputFolder [FOLDER PATH]          Features output folder
-  -q, --jql [JQL]                           JQL filter for features download or Jira issues to update with test results
-  -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
-  -x, --proxyURI [URI]                      Proxy URI
-  -b, --numbered [true|false]               Append number to feature name on download
-  -h, --help                                output usage information
+  Options:
+  -V, --version                         output the version number
+  --projectId <ID>                      Jira project id
+  --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
+  --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
+  --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
+  --features                            Download features
+  --report                              Upload report
+  --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
+  --mode <mode>                         Features to download (default: "automated")
+  --tags <tag-expression>               Cucumber tag expression for filtering scenarios (default: "")
+  --runName [NAME]                      Test run name
+  --metadata [FILE PATH]                Metadata json file path
+  --outputFolder [FOLDER PATH]          Jira project id
+  --jql [JQL]                           JQL filter for features download and report upload
+  --jsonReportIncludePattern [PATTERN]  Pattern for json file names
+  --proxyHost [Host]                    Proxy Host
+  --proxyPort [Port]                    Proxy Port
+  --numbered [true|false]               Append number to feature name on download
+  -h, --help                            output usage information
 
 ```
 
-Mandatory parameters are -i, -a, -s (if -a or -s is missing the plugin will attempt to read them from ASSERTTHAT_ACCESS_KEY and ASSERTTHAT_SECRET_KEY environment variables respectively.
+Mandatory parameters are --projectId, --accessKey, --secretKey (if --accessKey or --secretKey is missing the plugin will attempt to read them from ASSERTTHAT_ACCESS_KEY and ASSERTTHAT_SECRET_KEY environment variables respectively.
 
 ## Using from within a script
 
@@ -90,17 +92,18 @@ assertThat.downloadFeatures({
 Available parameters:
 
 ```
-  -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
-  -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
-  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
-  -u, --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
-  -i, --projectId <ID>                      Jira project id
-  -m, --mode <mode>                         Features to download (default: "automated")
-  -l, --tags <tag-expression>               Cucumber tag expression for scenarios filtering
-  -o, --outputFolder [FOLDER PATH]          Jira project id
-  -q, --jql [JQL]                           JQL filter for features
-  -b, --numbered [true|false]               Append number to feature name on download
-  -x, --proxyURI [URI]                      Proxy URI
+  --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
+  --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
+  --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
+  --projectId <ID>                      Jira project id
+  --mode <mode>                         Features to download (default: "automated")
+  --tags <tag-expression>               Cucumber tag expression for scenarios filtering
+  --outputFolder [FOLDER PATH]          Jira project id
+  --jql [JQL]                           JQL filter for features
+  --numbered [true|false]               Append number to feature name on download
+  --proxyHost [Host]                    Proxy Host
+  --proxyPort [Port]                    Proxy Port
 ```
 
 * For uploading reports:
@@ -137,16 +140,17 @@ assertThat.uploadReports({
 Available parameters:
 
 ```
-  -a, --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
-  -s, --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
-  -t, --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
-  -i, --projectId <ID>                      Jira project id
-  -j, --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
-  -n, --runName [NAME]                      Test run name
-  -t, --jsonReportIncludePattern [PATTERN]  Pattern for json file names
-  -q, --jql [JQL]                           JQL filter for Jira issues to update with test results
-  -x, --proxyURI [URI]                      Proxy URI
-  -d, --metadata [FILE PATH]                Metadata json file path
+  --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
+  --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
+  --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
+  --projectId <ID>                      Jira project id
+  --jsonReportFolder [FOLDER PATH]      Cucumber json files folder
+  --runName [NAME]                      Test run name
+  --jsonReportIncludePattern [PATTERN]  Pattern for json file names
+  --jql [JQL]                           JQL filter for Jira issues to update with test results
+  --proxyHost [Host]                    Proxy Host
+  --proxyPort [Port]                    Proxy Port
+  --metadata [FILE PATH]                Metadata json file path
 ```
 
 * Metadata file path is the path to a  simple json file (no nesting) with some additional data about the run that can be optionally supplied. 

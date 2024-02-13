@@ -32,7 +32,7 @@
     "commander": "^2.20.0",
     "dateformat": "^3.0.3",
     "superagent": "^3.8.2",
-    "superagent-proxy": "^2.1.0",
+    "superagent-proxy": "^3.0.0",
     "underscore": "^1.13.2"
   },
   "devDependencies": {

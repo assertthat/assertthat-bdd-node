@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/assertthat/assertthat-bdd-maven-plugin.svg?branch=master)](https://travis-ci.org/assertthat/assertthat-bdd-node)
-
-# AssertThat BDD Node.js client
+# AssertThat BDD NPM client
 
 Node.js plugin for interaction with [AssertThat BDD Jira plugin](https://marketplace.atlassian.com/apps/1219033/assertthat-bdd-test-management-in-jira?hosting=cloud&tab=overview).
 
@@ -25,7 +23,7 @@ Available parameters:
   --projectId <ID>                      Jira project id
   --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
-  --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
+  --token [ASSERTTHAT_API_TOKEN]        Jira API token (for DataCenter only) as an alternative to accessKey/secretKey basic auth
   --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   --features                            Download features
   --report                              Upload report
@@ -94,7 +92,7 @@ Available parameters:
 ```
   --accessKey [ASSERTTHAT_ACCESS_KEY]   Access key
   --secretKey [ASSERTTHAT_SECRET_KEY]   Secret key
-  --token [ASSERTTHAT_API_TOKEN]        Jira API token (Server and DC only)
+  --token [ASSERTTHAT_API_TOKEN]        Jira API token (for DataCenter only) as an alternative to accessKey/secretKey basic auth
   --jiraServerUrl [URL]                 Jira server URL e.g https://mycompanyjira.com
   --projectId <ID>                      Jira project id
   --mode <mode>                         Features to download (default: "automated")
